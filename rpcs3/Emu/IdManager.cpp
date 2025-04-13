@@ -73,7 +73,7 @@ id_manager::id_key* idm::allocate_id(std::span<id_manager::id_key> keys, u32& hi
 		// Look for free ID
 		if (ptr->type() == umax)
 		{
-			// Incremenet ID invalidation counter
+			// Increment ID invalidation counter
 			const u32 id = next | ((ptr->value() + (1u << invl_range.first)) & (invl_range.second ? (((1u << invl_range.second) - 1) << invl_range.first) : 0));
 			id_manager::g_id = id;
 			*ptr = id_manager::id_key(id, type_id);

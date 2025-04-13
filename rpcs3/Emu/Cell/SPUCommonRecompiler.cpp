@@ -5319,7 +5319,7 @@ spu_program spu_recompiler_base::analyse(const be_t<u32>* ls, u32 entry_point, s
 						bool is_skipable = false;
 
 						// Hack to avoid extensive analysis of all code paths possible:
-						// Allow up to 4 occurences of the upper-most block
+						// Allow up to 4 occurrences of the upper-most block
 						// Because, loop "connectors" are usually backward in direction
 						// The proper solution would be to add a precursry function analysis stage which identifies all loop "connectors" and allows duplicates based on it
 						for (usz i = stackframe_it, count = 0;; count++)

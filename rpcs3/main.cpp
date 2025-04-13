@@ -1447,7 +1447,7 @@ int main(int argc, char** argv)
 				rpcs3_argv.emplace_back(arg);
 
 				sys_log.error("Optional command line argument %d: %s"
-					"\nPlease pass emulation arguments after an empty \"--\" paramater."
+					"\nPlease pass emulation arguments after an empty \"--\" parameter."
 					"\nIn the future, the emulator would not support optional arguments without it.", i, arg);
 			}
 		}
