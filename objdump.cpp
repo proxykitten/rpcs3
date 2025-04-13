@@ -3,7 +3,7 @@
 // On Linux, perf annotation tools do not automatically
 // disassemble runtime-generated code.
 // However, it's possible to override objdump utility
-// which is used to disassemeble executables.
+// which is used to disassemble executables.
 // This tool intercepts objdump commands, and if they
 // correspond to JIT generated objects in RPCS3,
 // it should be able to correctly disassemble them.

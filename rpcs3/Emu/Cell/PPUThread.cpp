@@ -5618,7 +5618,7 @@ bool ppu_initialize(const ppu_module<lv2_obj>& info, bool check_only, u64 file_s
 
 			if (mod_index % increment_link_count_at == (link_workload.size() - 1) % increment_link_count_at)
 			{
-				// Incremenet 'pdone' Nth times where N is link workload size ceil-divided by increment_link_count_at
+				// Increment 'pdone' Nth times where N is link workload size ceil-divided by increment_link_count_at
 				g_progr_pdone++;
 			}
 

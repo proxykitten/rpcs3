@@ -1190,7 +1190,7 @@ game_boot_result Emulator::Load(const std::string& title_id, bool is_disc_patch,
 
 				if (size % 512 || max_data_size < size || max_data_size - size < m_ar->pos)
 				{
-					fmt::throw_exception("TAR desrialization failed: Invalid size. TAR size: 0x%x, path='%s', ar: %s", size, path, *m_ar);
+					fmt::throw_exception("TAR deserialization failed: Invalid size. TAR size: 0x%x, path='%s', ar: %s", size, path, *m_ar);
 				}
 
 				fs::remove_all(path, size == 0);
@@ -3094,7 +3094,7 @@ void Emulator::Kill(bool allow_autoexit, bool savestate, savestate_stage* save_s
 
 						sys_log.error("Failed to savestate: Savedata operation is active."
 							"\nYour best chance is to wait for the current game saving operation to finish and retry."
-							"\nThe game is probably displaying a saving cicrle or other gesture to indicate that it is saving.");
+							"\nThe game is probably displaying a saving circle or other gesture to indicate that it is saving.");
 					}
 
 					m_emu_state_close_pending = false;
@@ -3314,7 +3314,7 @@ void Emulator::Kill(bool allow_autoexit, bool savestate, savestate_stage* save_s
 
 		static_cast<void>(init_mtx->init());
 
-		// Call explcit semi-destructors (free memory before savestate)
+		// Call explicit semi-destructors (free memory before savestate)
 		for (const auto& [type, data] : *g_fxo)
 		{
 			if (type.thread_op)
@@ -3538,7 +3538,7 @@ void Emulator::Kill(bool allow_autoexit, bool savestate, savestate_stage* save_s
 		{
 			fs::stat_t file_stat{};
 
-			set_progress_message("Commiting File");
+			set_progress_message("Committing File");
 
 			{
 				auto& ar = *to_ar->load();

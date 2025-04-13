@@ -119,7 +119,7 @@ namespace pine
 			MsgTitle = 0xB,         /**< Returns the game title. */
 			MsgID = 0xC,            /**< Returns the game ID. */
 			MsgUUID = 0xD,          /**< Returns the game UUID. */
-			MsgGameVersion = 0xE,   /**< Returns the game verion. */
+			MsgGameVersion = 0xE,   /**< Returns the game version. */
 			MsgStatus = 0xF,        /**< Returns the emulator status. */
 			MsgUnimplemented = 0xFF /**< Unimplemented IPC message. */
 		};

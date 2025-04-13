@@ -59,12 +59,12 @@ scoped_progress_dialog::scoped_progress_dialog(std::string text) noexcept
 	{
 		if (new_text_index >= init_size)
 		{
-			// Search element in new memeory
+			// Search element in new memory
 			new_text_index++;
 		}
 		else if (new_text_index == 0)
 		{
-			// Search element in new memeory
+			// Search element in new memory
 			new_text_index = init_size;
 		}
 		else
@@ -110,7 +110,7 @@ scoped_progress_dialog::~scoped_progress_dialog() noexcept
 		if (progr.text_index == m_text_index && !g_progr_text_queue[m_text_index])
 		{
 			// Search for available text
-			// Out of scope of atomic loop to keep atomic_op as clean as possible (for potential future enhacements)
+			// Out of scope of atomic loop to keep atomic_op as clean as possible (for potential future enhancements)
 			const u64 queue_size = g_progr_text_queue.size();
 
 			for (u64 i = queue_size - 1;; i--)
